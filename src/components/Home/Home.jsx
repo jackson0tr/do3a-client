@@ -25,7 +25,7 @@ const Home = () => {
           ...scrollRevealOptions,
           delay: 2000,
         });
-        ScrollReveal().reveal('.last p', {
+        ScrollReveal().reveal('.container__right p', {
           ...scrollRevealOptions,
           delay: 2500,
         });
@@ -51,12 +51,12 @@ const Home = () => {
                     <br />
                     {
                         data && data.map((i, index) => (
-                            <div className="last" key={index}>
+                            <>
                                 <p>
                                     {i?.quote}
                                 </p>
                                 <br />
-                            </div>
+                            </>
                         ))
                     }
                 </div>
