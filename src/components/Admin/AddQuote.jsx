@@ -16,7 +16,7 @@ const CreateQuote = () => {
     }
     if (success) {
       toast.success("تم اضافة الحديث بنجاح");
-      navigate("/dashboard");
+      navigate("/admin/dashboard");
       window.location.reload();
     }
   }, [dispatch, error, success]);

@@ -14,19 +14,22 @@ const EditQuoteAdmin = () => {
   const [data,setData] = useState([]);
   const { id } = useParams();
 
+  useEffect(()=>{
+    axios.get(`${server}/quote/get-quote/${id}`, { withCredentials: true }).then((res) => {
+      setData(res.data.quote);
+    });
+  },[])
+
   useEffect(() => {
+
     if (error) {
       toast.error(error);
     }
     if (success) {
       toast.success("تم تعديل الحديث بنجاح");
-      navigate("/dashboard");
+      navigate("/admin/dashboard");
       window.location.reload();
     }
-
-    axios.get(`${server}/quote/get-quote/${id}`, { withCredentials: true }).then((res) => {
-      setData(res.data.quote);
-    });
 
   }, [dispatch, error, success]);
 
