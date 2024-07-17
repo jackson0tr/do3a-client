@@ -25,7 +25,7 @@ const Home = () => {
           ...scrollRevealOptions,
           delay: 2000,
         });
-        ScrollReveal().reveal('.container__right .last p', {
+        ScrollReveal().reveal('.last p', {
           ...scrollRevealOptions,
           delay: 2500,
         });
