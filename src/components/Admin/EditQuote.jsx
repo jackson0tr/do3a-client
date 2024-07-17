@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { editQuote } from "../../redux/actions/quote";
 import { toast } from "react-toastify";
 import axios from "axios";
+import {server} from '../../server';
 
 const EditQuoteAdmin = () => {
   const { success, error } = useSelector((state) => state.quote);
